@@ -304,37 +304,55 @@ window.addEventListener('load',()=>{
 // YES BUTTON
 // =========================
 
-async function sayYes(){
+function sayYes(){
 
-  document.getElementById('letterScreen')
-  .style.display='none';
+  // HIDE LETTER
+
+  const letterScreen =
+  document.getElementById('letterScreen');
+
+  letterScreen.style.display='none';
+
+  // SHOW CELEBRATION
 
   const celebration =
   document.getElementById('celebration');
 
   celebration.style.display='flex';
 
-  // PLAY SONG
+  // PLAY MUSIC
 
   const song =
   document.getElementById('loveSong');
 
-  try{
+  if(song){
 
-    song.volume = 1;
+    song.currentTime = 0;
 
-    await song.play();
+    const playPromise = song.play();
 
-  }catch(err){
+    if(playPromise !== undefined){
 
-    console.log("Audio blocked:",err);
+      playPromise
+      .then(() => {
+
+        console.log("Music playing");
+
+      })
+      .catch(error => {
+
+        console.log("Playback failed:", error);
+
+      });
+    }
   }
+
+  // EFFECTS
 
   createHearts();
 
   launchFireworks();
 }
-
 // =========================
 // HEART EXPLOSION
 // =========================
