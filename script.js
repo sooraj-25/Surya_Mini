@@ -430,3 +430,19 @@ function launchFireworks(){
 
   }
 }
+
+// =========================
+// YES BUTTON CLICK EVENT
+// =========================
+
+window.addEventListener('load',()=>{
+
+  const yesBtn =
+  document.getElementById('yesBtn');
+
+  if(yesBtn){
+
+    yesBtn.addEventListener('click',sayYes);
+  }
+
+});
