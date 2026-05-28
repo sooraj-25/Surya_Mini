@@ -225,3 +225,20 @@ button{
   margin-top:35px;
   font-size:90px;
 }
+
+/* HEART EXPLOSION */
+
+.heart{
+  position:fixed;
+  pointer-events:none;
+  z-index:999;
+}
+
+@keyframes explode{
+  to{
+    transform:
+    translateY(-120vh)
+    rotate(720deg);
+    opacity:0;
+  }
+}
