@@ -242,3 +242,19 @@ button{
     opacity:0;
   }
 }
+
+/* FIX BUTTON LAYERS */
+
+.buttons{
+  position:relative;
+}
+
+#yesBtn{
+  position:relative;
+  z-index:10;
+}
+
+#noBtn{
+  position:relative;
+  z-index:1;
+}
