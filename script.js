@@ -432,17 +432,31 @@ function launchFireworks(){
 }
 
 // =========================
-// YES BUTTON CLICK EVENT
+// MAGNETIC NO BUTTON
 // =========================
 
 window.addEventListener('load',()=>{
 
-  const yesBtn =
-  document.getElementById('yesBtn');
+  const noBtn =
+  document.getElementById('noBtn');
 
-  if(yesBtn){
+  const funnyText =
+  document.getElementById('funnyText');
 
-    yesBtn.addEventListener('click',sayYes);
-  }
+  noBtn.addEventListener('mouseenter',()=>{
+
+    const randomX =
+    Math.random()*200 - 100;
+
+    const randomY =
+    Math.random()*120 - 60;
+
+    noBtn.style.transform =
+    `translate(${randomX}px,${randomY}px)`;
+
+    funnyText.innerHTML =
+    "Nice try Shehana 😭❤️";
+
+  });
 
 });
