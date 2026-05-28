@@ -1,0 +1,227 @@
+@font-face{
+  font-family:'Coneria';
+  src:url('https://fonts.cdnfonts.com/s/14998/ConeriaScriptDemo.woff') format('woff');
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  overflow-x:hidden;
+  overflow-y:auto;
+  font-family:'Poppins',sans-serif;
+  min-height:100vh;
+  background:radial-gradient(circle at top,#4a0d23,#1a0710 45%,#000);
+  color:white;
+  position:relative;
+}
+
+.stars{
+  position:fixed;
+  inset:0;
+  overflow:hidden;
+  z-index:0;
+}
+
+.star{
+  position:absolute;
+  width:2px;
+  height:2px;
+  background:white;
+  border-radius:50%;
+  animation:twinkle 2s infinite alternate;
+}
+
+@keyframes twinkle{
+  from{opacity:.2;}
+  to{opacity:1;}
+}
+
+.petal{
+  position:fixed;
+  top:-20px;
+  color:#ff4d88;
+  font-size:20px;
+  animation:fall linear forwards;
+  opacity:.9;
+  z-index:1;
+  pointer-events:none;
+}
+
+@keyframes fall{
+  to{
+    transform:translateY(110vh) rotate(360deg);
+    opacity:0;
+  }
+}
+
+.center{
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  z-index:5;
+  flex-direction:column;
+}
+
+.envelope-wrapper{
+  text-align:center;
+}
+
+.envelope{
+  width:320px;
+  height:220px;
+  background:#1c0a11;
+  border:2px solid gold;
+  border-radius:14px;
+  position:relative;
+  cursor:pointer;
+  overflow:hidden;
+  transition:.4s;
+  box-shadow:0 0 45px rgba(255,0,120,.35);
+}
+
+.flap{
+  position:absolute;
+  width:100%;
+  height:100%;
+  background:#2b0c18;
+  clip-path:polygon(0 0,50% 55%,100% 0);
+}
+
+.seal{
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  width:72px;
+  height:72px;
+  border-radius:50%;
+  background:#9d0038;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  border:2px solid gold;
+  font-weight:bold;
+  font-size:18px;
+}
+
+.open-text{
+  margin-top:24px;
+  font-size:20px;
+  color:#ffd9e7;
+}
+
+.back-btn{
+  position:absolute;
+  top:15px;
+  left:15px;
+  padding:8px 14px;
+  border:none;
+  border-radius:999px;
+  background:rgba(255,255,255,.08);
+  color:white;
+  cursor:pointer;
+  font-size:13px;
+}
+
+.letter-screen{
+  display:none;
+  min-height:100vh;
+  justify-content:center;
+  align-items:flex-start;
+  padding:80px 20px;
+}
+
+.letter{
+  width:90%;
+  max-width:760px;
+  background:rgba(20,8,14,.95);
+  border-radius:28px;
+  padding:50px;
+  border:2px solid rgba(255,215,0,.45);
+}
+
+.title{
+  font-family:'Coneria',cursive;
+  font-size:62px;
+  text-align:center;
+  color:#ffd166;
+  margin-bottom:30px;
+}
+
+#typedText{
+  font-family:'Coneria',cursive;
+  font-size:26px;
+  line-height:2;
+  color:#fff0f5;
+  white-space:pre-line;
+}
+
+.buttons{
+  margin-top:45px;
+  display:none;
+  justify-content:center;
+  gap:30px;
+  flex-wrap:wrap;
+}
+
+.buttons.show{
+  display:flex;
+}
+
+button{
+  border:none;
+  padding:16px 38px;
+  border-radius:999px;
+  font-size:18px;
+  cursor:pointer;
+}
+
+#yesBtn{
+  background:linear-gradient(45deg,#ff006a,#ff4da6);
+  color:white;
+}
+
+#noBtn{
+  background:#2c2c2c;
+  color:white;
+}
+
+.funny-text{
+  margin-top:18px;
+  text-align:center;
+  color:#ffbfd6;
+}
+
+.celebration{
+  display:none;
+  position:fixed;
+  inset:0;
+  background:radial-gradient(circle at center,#550021,#17030c 50%,#000);
+  z-index:50;
+  justify-content:center;
+  align-items:center;
+  flex-direction:column;
+  text-align:center;
+}
+
+.celebration h1{
+  font-size:78px;
+  font-family:'Coneria',cursive;
+  color:#ffd166;
+}
+
+.celebration p{
+  margin-top:18px;
+  font-size:32px;
+  font-family:'Coneria',cursive;
+}
+
+.ring{
+  margin-top:35px;
+  font-size:90px;
+}

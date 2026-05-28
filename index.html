@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>For Shehana ❤️</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="stars" id="stars"></div>
+
+<div class="center" id="envelopeScreen">
+
+  <div class="envelope-wrapper">
+
+    <div class="envelope" onclick="openLetter()">
+
+      <div class="flap"></div>
+
+      <div class="seal">
+        S ❤️ S
+      </div>
+
+    </div>
+
+    <div class="open-text">
+      A letter has arrived for Shehana
+    </div>
+
+  </div>
+
+</div>
+
+<div class="letter-screen" id="letterScreen">
+
+  <button class="back-btn" onclick="goHome()">
+    ← Back
+  </button>
+
+  <div class="letter">
+
+    <div class="title">
+      My Dearest Shehana
+    </div>
+
+    <div id="typedText"></div>
+
+    <div class="buttons" id="buttons">
+
+      <button id="yesBtn" onclick="sayYes()">
+        YES ❤️
+      </button>
+
+      <button id="noBtn">
+        NO 😭
+      </button>
+
+    </div>
+
+    <div class="funny-text" id="funnyText"></div>
+
+  </div>
+
+</div>
+
+<div class="celebration" id="celebration">
+
+  <button class="back-btn" onclick="backToLetter()">
+    ← Back
+  </button>
+
+  <h1>She Said YES 💍</h1>
+
+  <p>
+    Forever begins now, Shehana ❤️
+  </p>
+
+  <div class="ring">
+    💍
+  </div>
+
+  <div class="footer">
+    Made with endless love by Sooraj
+  </div>
+
+</div>
+
+<audio id="loveSong" preload="auto">
+  <source src="music/proposal-song.mp3" type="audio/mpeg">
+</audio>
+
+<script src="script.js"></script>
+
+</body>
+</html>
